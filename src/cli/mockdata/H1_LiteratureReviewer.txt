@@ -1,0 +1,33 @@
+Title: The single-cell transcriptomic landscape of early human diabetic nephropathy
+
+Source: Wilson et al. (2019), PNAS
+
+Relevance (Why Selected):
+
+Establishes the "Normal" vs. "Early Disease" Baseline: This paper provides the definitive gene signatures for healthy Proximal Tubules. It is essential for defining the "start point" of your hypothesis (DM stage) and identifying exactly what is being lost as the disease progresses.
+
+UI Tag: Baseline Signature Proximal Tubules
+
+
+
+Title: Decoding myofibroblast origins in human kidney fibrosis
+
+Source: Kuppe et al. (2021), Nature
+
+Relevance (Why Selected):
+
+Validates the "Upregulation" Hypothesis: It maps the trajectory of how healthy cells transform into Myofibroblasts (the source of aSMA/Collagen). This directly supports the second half of your hypothesis regarding the concurrent upregulation of fibrosis markers.
+
+UI Tag: Fibrosis Trajectory aSMA Origin
+
+
+
+Title: Tubular atrophy and interstitial fibrosis: the missing link in diabetic kidney disease progression
+
+Source: Gilbert & Cooper (1999), Kidney International
+
+Relevance (Why Selected):
+
+Connects Structure to Outcome: This is a classic foundational paper that links Structural Atrophy (your visual input) directly to clinical progression. It provides the medical rationale for why "Tubular Loss" is a critical predictor of "Disease Relevance Score."
+
+UI Tag: Clinical Outcome Structural Atrophy

@@ -1,0 +1,30 @@
+0. System Initialization
+
+Phase 1:: Plan Module
+此模块的 Agent 负责确立物理边界与理论边界，最终合成可执行的蓝图。
+Action 1: DataAnalyst
+CLI 演示效果: 在终端打印出数据集的稀疏度警告和空间高变基因列表，证明系统具备底层物理感知能力。参考cli/mockdata/H1_DataAnalyst.txt
+
+Action 2: LiteratureReviewer
+CLI 演示效果: 终端打印出获取的Literature Summaries，展示系统如何获取 Domain-specific Biological Priors。参考cli/mockdata/H1_LiteratureReviewer.txt
+
+Action 3: Planner (PI) (约束求解与执行蓝图生成)
+CLI 演示效果: 终端打印出Background Knowledge和Analysis Plan. 参考cli/mockdata/H1_Planner.txt
+
+
+Phase 2: Interpretation Module
+
+Action 4: 系统调用Anchor-Cluster-Expand算法，对数据集进行采样. 这部分数据已经采样完毕，存储于data/s255/s255_pivot_ROIs_registry.pkl
+CLI 演示效果: 终端打印出进度条，显示采样进度，由于是demo，可以设计一个10s左右的进度条模拟这一过程；
+
+Action 5: 高通量并行对采样得到的ROI进行Interpretation，OmicsProfiler和VisualProfiler开始对采样得到的ROI生成OmicsProfile, VisualProfile.
+CLI 演示效果: 终端打印出进度条，显示Interpretation进度，由于是demo，可以设计一个10s左右的进度条模拟这一过程。采样完成后log 所有Interpretation Report已存入FAISS数据库。
+
+
+
+Phase 3: Analysis Module
+Action 6: SemanticRetriever显示分析当前Hypothesis，以Keyword "Proximal Tubules"对FAISS数据库进行检索，显示匹配到160个ROI.
+CLI 演示效果: 终端打印出正以Keyword "Proximal Tubules"对FAISS数据库进行检索，大概3s后显示匹配到160个ROI.
+
+Action 7: HypothesisValidator生成Analysis Report，展示Hypothesis验证结论和一些重要发现.
+CLI 演示效果: 终端打印出Conclusion: VERIFIED, 然后显示一些Report中重要的内容。参考cli/mockdata/H1_HypothesisValidator.txt

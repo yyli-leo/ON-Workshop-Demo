@@ -1,0 +1,8 @@
+Conclusion: VERIFIED
+The data confirms synchronous tubular loss and fibrosis upregulation, specifically identifying a critical "Active Remodeling Window" at the DKD2A => B transition.
+Key Evidence
+- Structural Atrophy: Proximal Tubule abundance shows a significant downward trend (The "Scissors Effect").
+- Non-Linear Peak: Fibrosis score (aSMA + ColIV) peaks aggressively at DKD2A => B, rather than rising linearly.
+- Hidden Damage: Late-stage intact tubules exhibit a +64% increase in fibrosis markers compared to baseline.
+Follow-up Recommendation
+- Next Step: Correlate M2 Macrophage (CD163+) density with the DKD2A => B peak to investigate immune drivers..

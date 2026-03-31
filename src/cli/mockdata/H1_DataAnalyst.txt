@@ -1,0 +1,48 @@
+============================================================
+
+[1/3] Computing dataset sparsity...
+=== Dataset Sparsity Analysis ===
+Dimensions: 137654 cells × 42 biomarkers
+Total Elements: 5,781,468
+Zero Values: 18 (0.00%)
+Non-zero Mean: 137.4525 ± 330.0103
+
+[2/3] Computing cellular composition...
+=== Cellular Composition Analysis ===
+Total Cells: 137,654
+Unique Cell Types: 11
+
+--- Global Cell Type Distribution ---
+Cell Type                      | Count      | Fraction
+--------------------------------------------------------
+Proximal tubules (CD183++/CD227-) | 48,910     | 0.3553
+Distal tubules (CD183+/CD227+) | 26,057     | 0.1893
+Endothelial cells (CD31+)      | 12,909     | 0.0938
+Basement membrane (collagenIV+/Perlecan+) | 11,642     | 0.0846
+VSMCs (aSMA+)                  | 10,557     | 0.0767
+Immune cells (CD45+)           | 8,271      | 0.0601
+Macrophages (CD45+/CD68+)      | 5,953      | 0.0432
+Low expressing cells           | 5,512      | 0.0400
+Endothelial cells (CD31+/CD196+) | 4,787      | 0.0348
+Nestin+ cells (nestin+)        | 1,924      | 0.0140
+Myeloid cells (CD45+/CD11b+)   | 1,132      | 0.0082
+
+[3/3] Computing spatially variable biomarkers (max 43 biomarkers)...
+=== Spatially Highly Variable Biomarkers (Moran's I) ===
+Biomarkers Tested: 42
+Significant Biomarkers (p < 0.05): 23
+
+--- Top 10 Spatially Variable Biomarkers ---
+Biomarker       | Moran's I    | Z-Score    | P-Value
+-------------------------------------------------------
+aSMA            | 0.5400       | 5.05       | 4.40e-07   ***
+CD227           | 0.5061       | 11.14      | 0.00e+00   ***
+C5aR            | 0.4857       | 8.36       | 0.00e+00   ***
+SPP1            | 0.4517       | 6.78       | 1.17e-11   ***
+Nestin          | 0.3961       | 9.31       | 0.00e+00   ***
+TFAM            | 0.3951       | 13.83      | 0.00e+00   ***
+EpCAM           | 0.3902       | 9.02       | 0.00e+00   ***
+CD196           | 0.3735       | 4.29       | 1.75e-05   ***
+CD107a          | 0.3667       | 9.15       | 0.00e+00   ***
+C1QC            | 0.3593       | 9.46       | 0.00e+00   ***
+============================================================

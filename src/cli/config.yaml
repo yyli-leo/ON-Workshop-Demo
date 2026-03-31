@@ -1,0 +1,42 @@
+# OmicsNavigator CLI - Session Configuration
+
+system:
+  # The default LLM backend for orchestration and reasoning.
+  default_model: "gemini-3.1-flash-lite-preview"
+  # IMPORTANT: Do not hardcode API keys here.
+  # Use environment variables (e.g., GEMINI_API_KEY) in your runtime environment.
+  api_key_env_var: "GEMINI_API_KEY"
+  # Defines the verbosity of the CLI output (DEBUG, INFO, WARNING, ERROR)
+  log_level: "INFO"
+  # Maximum concurrent agent threads for parallel hypothesis validation
+  max_workers: 2
+
+  # Agent Execution Mode
+  # Set to "true" to use real LangGraph agents, "false" for mock demo
+  use_real_agents: false
+
+session:
+  # Absolute or relative path to the target spatial omics dataset
+  data_path: "./data/DKD/"
+  # Directory where analysis reports, plots, and intermediate states are saved
+  output_dir: "./output/ON_hypothesis/"
+
+metadata:
+  # Essential context for the LLM to understand the data dimensions
+  technology: "MIF"
+  phynotypes: "Healthy, Diabetic Mellitus, Diabetic Kidney Disease"
+  tissue: "Kidney"
+
+hypotheses:
+  # Structured list of hypotheses for automated agent validation
+  - id: "H1"
+    description: "Verify if DKD progression is characterized by a quantifiable loss of functional Proximal Tubules and a concurrent upregulation of Fibrosis Markers (CollagenIV, aSMA), specifically looking for hidden damage in late-stage tubules."
+
+# LangGraph Configuration (for real agent execution)
+langgraph:
+  # Checkpoint database for state persistence
+  checkpoint_db: "checkpoints.db"
+  # Maximum recursion depth for workflow
+  recursion_limit: 100
+  # Timeout for workflow execution (seconds)
+  timeout_seconds: 600
