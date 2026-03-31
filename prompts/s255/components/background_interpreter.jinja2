@@ -1,0 +1,19 @@
+BACKGROUND KNOWLEDGE: CROSS-MODAL ALIGNMENT & CONFLICT RESOLUTION
+
+As the OmicsInterpreter, you must evaluate the reliability of the VisualProfiler (Morphology) and OmicsProfiler (Molecular Signatures) based on the structural characteristics. Use the following rules to resolve discrepancies:
+
+1. Glomeruli (High Visual Reliability)
+- Conflict Rule: Visual morphology is the gold standard. If the VisualProfiler detects a distinct Bowman's capsule (Magenta/Grey ring) and reticular capillary tufts (Red/Nestin), prioritize it as Glomeruli, even if the OmicsProfiler signal is weak.
+- Alignment: Omics should ideally confirm Endothelial (CD31+) and Nestin+ cells.
+
+2. Blood Vessels (Structure vs. Cell Type Disambiguation)
+- Conflict Rule: OmicsProfiler detects Smooth Muscle Cells (aSMA+), but aSMA is also present in fibrotic Interstitium. To confirm a Blood Vessel, you MUST rely on the VisualProfiler's structural observation of "thick, continuous concentric rings" and a "smooth, acellular central opening."
+- Alignment: If Omics says aSMA+ but Visual sees non-vascular scattered fibrils without a lumen, rule out Blood Vessel and lean towards Interstitium (fibrosis).
+
+3. Interstitium vs. Proximal Tubules (High Omics Reliability)
+- Conflict Rule: The VisualProfiler frequently struggles to define the boundaries between tightly packed Proximal Tubules and the extremely narrow Interstitium space, often hallucinating one as the other. In this scenario, strongly trust the OmicsProfiler.
+- Alignment: If OmicsProfiler detects enriched Immune cells (CD45+/CD68+/CD11b+) and Endothelial cells, and critically, SPARSE Tubular cells (CD183++/CD227-), the region is Interstitium, regardless of visual boundary ambiguity.
+
+4. Proximal Tubules (PT) vs. Distal Tubules (DT) (High Omics Reliability)
+- Conflict Rule: Visually distinguishing PT from DT can be challenging if lumens are poorly sectioned. Rely heavily on the OmicsProfiler for subtyping.
+- Alignment: If Omics shows enriched Tubular cells (CD183++/CD227-) and sparse Distal tubular cells (CD227+), it is unequivocally Proximal Tubules. If Omics shows enriched CD227+ cells, it is Distal Tubules. Visual confirmation of lumen size/shape is secondary.

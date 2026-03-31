@@ -1,0 +1,17 @@
+# Core dependencies
+pyyaml>=6.0
+python-dotenv>=1.0.0
+Pillow>=10.0.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+tqdm>=4.65.0
+jinja2>=3.1.0
+numpy>=1.24.0
+
+# LLM SDKs (for real mode)
+# Install at least one of these:
+google-genai>=1.0.0    # For Gemini models (gemini-2.5-flash-lite, gemini-2.5-pro, gemini-3.1-flash-lite-preview, gemini-3.1-pro-preview)
+# anthropic>=0.18.0    # For Claude models (claude-sonnet-4-5)
+# openai>=1.0.0        # For GPT models (gpt-4, gpt-3.5-turbo)
+
+# Note: Grok models use the OpenAI SDK with xAI API endpoint

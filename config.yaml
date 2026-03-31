@@ -1,0 +1,64 @@
+# ROI Interpretation Pipeline - Configuration
+# This file contains internal settings that users typically don't need to modify.
+
+# ============================================================
+# DATA PATHS
+# ============================================================
+# These paths are relative to the workshop_demo directory
+
+# Root directory for data files
+data_root: "data/DKD"
+
+# Path to the ROI registry pickle file
+# For demo: use demo_final with 50 SOTA ROIs
+registry_path: "data/DKD/s255_pivot_ROIs_registry.pkl"
+
+# Directory containing cached SOTA results (for simulation mode)
+sota_demo_dir: "data/DKD/cached_results/"
+
+# ============================================================
+# PIPELINE SETTINGS
+# ============================================================
+# These settings control the pipeline execution behavior
+
+# Model name (can be overridden in demo.ipynb)
+# Options: gemini-2.5-flash-lite, gemini-2.5-pro, claude-sonnet-4-5
+model_name: "gemini-2.5-flash-lite"
+
+# Scale factor for full images (0.25 = 25% of original size)
+# Reduces token usage for LLM while preserving context
+full_image_scale_factor: 0.25
+
+# Temperature for LLM generation (0.0 = deterministic)
+temperature: 0.0
+
+# Maximum retry attempts for failed LLM calls
+max_retries: 5
+
+# Number of parallel workers for LLM calls
+max_workers: 5
+
+# ============================================================
+# EVALUATION SETTINGS
+# ============================================================
+# Tissue structure classes for evaluation
+
+classes:
+  - Proximal tubules
+  - Distal tubules
+  - Glomeruli
+  - Blood vessel
+  - Interstitium
+
+# ============================================================
+# PROMPT TEMPLATES
+# ============================================================
+# Paths to Jinja2 templates for system and user prompts
+# These are located in prompts/ directory
+
+visual_system_tpl: "s255/system_instruction_vis.jinja2"
+visual_prompt_tpl: "s255/interpretation_vis.jinja2"
+omics_system_tpl: "s255/system_instruction_omics.jinja2"
+omics_prompt_tpl: "s255/interpretation_omics.jinja2"
+interpreter_system_tpl: "s255/system_instruction_interpreter.jinja2"
+interpreter_prompt_tpl: "s255/interpretation_interpreter.jinja2"

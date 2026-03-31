@@ -1,0 +1,9 @@
+data
+CLAUDE.md
+.idea
+__pycache__
+.DS_Store
+
+# Pickle backup files
+*.bak
+*.pkl.bak
